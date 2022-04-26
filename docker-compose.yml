@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  m:
+    build:
+      context: ./m
+    volumes:
+      - ./m:/src
+    command: node index.js
+    ports:
+      - "8000:8000"
+  r1:
+    build:
+      context: ./r
+    volumes:
+      - ./r:/src
+    command: node index.js r1
+  r2:
+    build:
+      context: ./r
+    volumes:
+      - ./r:/src
+    command: node index.js r2
