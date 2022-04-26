@@ -111,7 +111,6 @@ ipc.serveNet("m", () => {
               let sortedLaps = laps.sort(
                 (a, b) => a.lapR1.length - b.lapR1.length
               );
-              console.log("sortedLaps lenght", sortedLaps.length);
               sortedLaps.forEach((lap) => {
                 logLap(lap);
               });
