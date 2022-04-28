@@ -5,6 +5,7 @@ services:
       context: ./m
     volumes:
       - ./m:/src
+      - /src/node_modules
     command: node index.js
     ports:
       - "8000:8000"
@@ -13,10 +14,12 @@ services:
       context: ./r
     volumes:
       - ./r:/src
+      - /src/node_modules
     command: node index.js r1
   r2:
     build:
       context: ./r
     volumes:
       - ./r:/src
+      - /src/node_modules
     command: node index.js r2
